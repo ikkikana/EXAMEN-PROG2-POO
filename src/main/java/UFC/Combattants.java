@@ -11,7 +11,7 @@ public class Combattants {
     private float poids;
     private List<listeTitre> listes = new ArrayList<>();
 
-    public Combattants(String idCombattant, String nom, String prenom, String nomCombattants, float poids, String listes) {
+    public Combattants(String idCombattant, String nom, String prenom, String nomCombattants, float poids, List<listeTitre> listes) {
         this.idCombattant = idCombattant;
         this.nom = nom;
         this.prenom = prenom;
@@ -20,12 +20,12 @@ public class Combattants {
         this.listes = listes;
     }
 
-    public Combattants(String idCombattant, String nomCombattants, float poids, String listes) {
-        this.idCombattant = idCombattant;
-        this.nom = nomCombattants;
+    public Combattants(String nomCombattants, float poids) {
+        this.nomCombattants = nomCombattants;
         this.poids = poids;
-        this.listes = new ArrayList();
     }
+
+
 
     public String getIdCombattant() {
         return idCombattant;

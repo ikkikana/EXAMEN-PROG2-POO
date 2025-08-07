@@ -11,16 +11,39 @@ public class Match extends Combattants {
     private LocalDate date;
     private String endroit;
 
-    public Match(String idCombattant, String nomCombattants, float poids, String listes, String endroit, LocalDate date) {
-        super(idCombattant, nomCombattants, poids, listes);
-        this.endroit = endroit;
-        this.date = date;
+    public Match(String nomCombattants, float poids) {
+        super(nomCombattants, poids);
     }
 
-    /* public class MacthCombattants() {
-        List<String> trierMatchCombattants(List<String> combattants) {
-            return combattants.stream().sorted(Comparator.comparing(String::this.getClass(getPoids()))).collect(Collectors.toList());
-        }
+    public int getId() {
+        return id;
+    }
 
-    }*/
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public String getEndroit() {
+        return endroit;
+    }
+    public void Terminer(){
+        return ;
+    }
+
+    public void MatchAmicaux(Match match) {
+        Match.add(match);
+    }
+    public void Matchofficiels(Match match){
+        long MatchOfficiel(List<String> match) {
+            return match.stream()
+                    .sorted( Comparator.comparing(String::this.getPoids()))
+                    .collect(Collectors.toList());
+        }
+    public void MatchTitres(Match match){
+
+    }
+
+
+
+
 }
